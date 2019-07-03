@@ -1,0 +1,137 @@
+#footer {
+	.footer-top {
+		&--content {
+			h3 {
+				position: relative;
+				padding-bottom: 10px;
+				margin-bottom: 20px;
+				&::after {
+					content: "";
+					background: $orange;
+					height: 2px;
+					width: 60px;
+					@include absolute(null,0,0,null);
+				}
+			}
+			color: #666;
+			ul {
+				li {
+					a {
+						text-decoration: none;
+						color: #666;
+					}
+				}
+				&.footer-link {
+					li {
+						a {
+							padding: 7px 0 7px 20px;
+							position: relative;
+							display: block;
+							&::before {
+								content: "\f192";
+								font-family: FontAwesome;
+								font-size: 8px;
+								@include absolute(12px,null,0,null);
+							}
+							&:hover {
+								color: $yellow;
+							}
+						}
+					}
+				}
+				&.contact-list {
+					li {
+						padding: 10px 0;
+						line-height: 1.4;
+						position: relative;
+						padding-left: 40px;
+						span {
+							background: url("../images/icon-contact.png") no-repeat;
+							display: inline-block;
+							width: 26px;
+							height: 30px;
+							@include absolute(0,null,0,null);
+							&.ct1 {
+								top: 10px;
+							}
+							&.ct2 {
+								background-position: 0 -61px;
+							    top: 5px;
+							}
+							&.ct3 {
+								background-position: 0 -103px;
+							}
+							&.ct4 {
+								background-position: 0 -149px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.footer-middle {
+		.footer-signup {
+			padding: 30px 60px;
+			border-top: 1px solid #ddd;
+			margin-top: 10px;
+			@media screen and (max-width: 767px) {
+				padding: 35px 0;
+			}
+			.iconf {
+				font-size: 38px;
+			    margin-right: 25px;
+			}
+			.signup-text {
+				h5 {
+					font-size: 22px;
+				    margin-bottom: 2px;
+				}
+				p {
+					color: #999;
+				}
+			}
+			.signup-box {
+				.form-control {
+					font-size: 13px;
+				    height: 50px;
+				    border-color: #eee;
+				}
+				.btn {
+					background: $orange;
+				    color: #fff;
+				    border-color: $orange;
+				    font-weight: 500;
+				    width: 105px;
+				    position: relative;
+				    z-index: 2;
+				    &::before {
+				    	content: "";
+				    	background: rgba(0,0,0,.1);
+				    	@include absolute(0,0,0,0);
+				    	opacity: 0;
+				    	visibility: hidden;
+				    	z-index: -1;
+				    }
+				    &:hover {
+				    	border-color: rgba(0,0,0,.1);
+				    	&::before {
+				    		opacity: 1;
+				    		visibility: visible;
+				    	}
+				    }
+				}
+			}
+		}
+	}
+	.footer-bottom {
+		padding: 10px 0;
+		border-top: 1px solid #ddd;
+		&--copyright {
+			a {
+				text-decoration: none;
+				color: $orange;
+			}
+		}
+	}
+}
